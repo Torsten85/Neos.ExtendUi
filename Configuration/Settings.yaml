@@ -1,0 +1,10 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'ByTorsten.Neos.ExtendUi': TRUE
+
+ByTorsten:
+  Neos:
+    ExtendUi:
+      replacements: {}

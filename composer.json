@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "typo3-flow-plugin",
+    "name": "bytorsten/neos-extendui",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "ByTorsten\\Neos\\ExtendUi": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "ByTorsten.Neos.ExtendUi"
+        }
+    }
+}

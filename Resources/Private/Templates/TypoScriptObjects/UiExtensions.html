@@ -1,0 +1,32 @@
+{namespace ui=ByTorsten\Neos\ExtendUi\ViewHelpers}
+
+<script>
+  <![CDATA[
+  window.require = {
+    context: 'neos',
+    map: ]]>{ui:mapping()}<![CDATA[
+  };
+  ]]>
+</script>
+
+<f:comment>
+
+  <script>
+    <![CDATA[
+    window.require = Object.assign(window.require || {}, {
+      context: 'neos',
+      map: {
+        '*': Object.assign((window.require && window.require.map && window.require.map['*']) || {}, {
+          'Content/Components/ContentContextBar': 'ByTorsten.DomainRouter/Content/Components/ContentContextBar'
+        }),
+
+        'ByTorsten.DomainRouter/Content/Components/ContentContextBar': {
+          'ContentContextBar': 'Content/Components/ContentContextBar'
+        }
+      }
+    });
+    ]]>
+  </script>
+
+
+</f:comment>

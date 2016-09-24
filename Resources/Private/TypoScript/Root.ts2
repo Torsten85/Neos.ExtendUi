@@ -1,0 +1,6 @@
+prototype(TYPO3.Neos:Page).extendUi = TYPO3.TypoScript:Template {
+  templatePath = 'resource://ByTorsten.Neos.ExtendUi/Private/Templates/TypoScriptObjects/UiExtensions.html'
+
+  @position = 'before neosBackendFooter'
+  @if.onlyRenderWhenNotInLiveWorkspace = ${documentNode.context.inBackend}
+}
