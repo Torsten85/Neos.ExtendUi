@@ -37,10 +37,16 @@ class MappingViewHelper extends AbstractViewHelper {
             preg_match('/\/([^\/]+)\/?$/', $path, $matches);
             $className = $matches[1];
             $replacementPath = $this->resourceManager->getPublicPackageResourceUriByPath($replacement);
+
             $mapping['*'][$path] = $replacementPath;
+            $mapping[$path] = [
+                $path => $path
+            ];
+
             $mapping[$replacementPath] = [
                 $className => $path
             ];
+
         }
 
         return json_encode($mapping, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
